@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Save State Demo</string>
+    <string name="fetch_token">Fetch the\nsuper-important\ntoken</string>
+    <string name="token_label">Token: %s</string>
+</resources>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Space
+        android:id="@+id/center"
+        android:layout_width="0dp"
+        android:layout_height="?actionBarSize"
+        android:layout_centerInParent="true" />
+
+    <Button
+        style="@style/Base.TextAppearance.AppCompat.Widget.Button.Borderless.Colored"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/center"
+        android:layout_centerHorizontal="true"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:onClick="handleButtonClick"
+        android:padding="16dp"
+        android:text="@string/fetch_token" />
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/am_token_card"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/center"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/am_token"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead" />
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="8dp" />
+
+            <TextView
+                android:id="@+id/am_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="italic" />
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+
+</RelativeLayout>
