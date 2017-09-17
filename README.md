@@ -8,4 +8,4 @@ However, the visibility state of the secret view is not preserved.
 
 The visibility state of the secret view is lost when the system destroys the `Activity` in background as well.
 
-![Home button](http://shaftapps.com/udacity_reviewer/gifs/nss_home_button.gif)
+![Home button](http://shaftapps.com/udacity_reviewer/gifs/nss_home.gif)
