@@ -11,6 +11,9 @@ import android.view.View;
 
 public class MainActivity extends AppCompatActivity {
 
+    private static final String VISIBLE_KEY = "token";
+
+    private boolean mSecretShown;
     private View mSecretView;
 
     @Override
@@ -18,13 +21,26 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         mSecretView = findViewById(R.id.am_secret_view);
+
+        if (savedInstanceState != null && savedInstanceState.containsKey(VISIBLE_KEY)) {
+            if (savedInstanceState.getBoolean(VISIBLE_KEY)) {
+                showSecretView();
+            }
+        }
     }
 
     public void handleButtonClick(View v) {
         showSecretView();
     }
 
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putBoolean(VISIBLE_KEY, mSecretShown);
+    }
+
     private void showSecretView() {
+        mSecretShown = true;
         mSecretView.setVisibility(View.VISIBLE);
     }
 }
