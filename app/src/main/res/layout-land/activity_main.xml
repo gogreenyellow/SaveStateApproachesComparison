@@ -5,16 +5,16 @@
 
     <Space
         android:id="@+id/center"
-        android:layout_width="0dp"
-        android:layout_height="32dp"
+        android:layout_width="32dp"
+        android:layout_height="0dp"
         android:layout_centerInParent="true" />
 
     <Button
         style="@style/Base.TextAppearance.AppCompat.Widget.Button.Borderless.Colored"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@id/center"
-        android:layout_centerHorizontal="true"
+        android:layout_toStartOf="@id/center"
+        android:layout_centerVertical="true"
         android:backgroundTint="@color/colorPrimaryDark"
         android:onClick="handleButtonClick"
         android:padding="16dp"
@@ -22,8 +22,8 @@
 
 
     <TextView
-        android:layout_below="@id/center"
-        android:layout_centerHorizontal="true"
+        android:layout_toEndOf="@id/center"
+        android:layout_centerVertical="true"
         android:text="@string/emoji"
         android:id="@+id/am_secret_view"
         android:layout_width="wrap_content"
