@@ -1,4 +1,4 @@
-## SaveStateDemo
+# SaveStateDemo
 
 Android can destroy an `Activity` in the background when it's short on resources. It is an important manner which should be close to the Android developers because it's their responsibility to **make this behavior invisible** for the users of the app. The majority of views save and restore their state automatically as described in the [documentation](https://developer.android.com/guide/components/activities/activity-lifecycle.html#saras), but there are some things (like the visibility status of the `View`) which has to be handled by the developer.
 
